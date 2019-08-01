@@ -1,0 +1,7 @@
+---
+# vars file for sops
+sops_exe: sops-{{ sops_ver }}.{{ sops_exe_suffix | default(sops_os) }}
+sops_url: '{{ sops_mirror }}/{{ sops_ver }}/{{ sops_exe }}'
+sops_checksum: '{{ sops_checksums[sops_ver][sops_os] }}'
+sops_installed_exe: '{{ sops_install_dir }}/{{ sops_exe }}'
+sops_link: '{{ sops_install_dir }}/sops'

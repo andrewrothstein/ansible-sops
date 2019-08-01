@@ -1,0 +1,3 @@
+---
+sops_os: windows
+sops_exe_suffix: exe
