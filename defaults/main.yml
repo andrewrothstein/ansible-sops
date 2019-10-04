@@ -1,7 +1,9 @@
 ---
 # defaults file for sops
-sops_ver: '3.3.1'
+sops_ver: '3.4.0'
 sops_os: linux
+
+sops_install_dir: /usr/local/bin
 
 sops_mirror: https://github.com/mozilla/sops/releases/download
 
@@ -13,5 +15,10 @@ sops_checksums:
     windows: sha256:56ecc6965880a7fa7c9ef826bf64f85a323493a5167194a38a16302f82cb7364
     # https://github.com/mozilla/sops/releases/download/3.3.1/sops-3.3.1.linux
     linux: sha256:6eacdd01b68fd140eb71bbca233bea897cccb75dbf9e00a02e648b2f9a8a6939
-
-sops_install_dir: /usr/local/bin
+  '3.4.0':
+    # https://github.com/mozilla/sops/releases/download/3.4.0/sops-3.4.0.darwin
+    darwin: sha256:a9e508953c9a61051872c844c1e359496c85ecc17dc46e800a990fb54dd7a959
+    # https://github.com/mozilla/sops/releases/download/3.4.0/sops-3.4.0.exe
+    windows: sha256:bc6502472ee7546849c42b9dbf9fe962e3e083c62bbf53529db2257f3c178cd3
+    # https://github.com/mozilla/sops/releases/download/3.4.0/sops-3.4.0.linux
+    linux: sha256:369ceb213c6fd84d76d89d82f7a63e2226b00f5128c7bb84c7ebcfaffbde6139

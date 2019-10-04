@@ -1,23 +1,23 @@
 #!/usr/bin/env sh
-VER=3.3.1
+VER=${1:-3.4.0}
 DIR=~/Downloads
 MIRROR=https://github.com/mozilla/sops/releases/download/${VER}
 
 dl()
 {
-    OS=$1
-    SUFFIX=$2
-    FILE=sops-${VER}.${SUFFIX}
-    URL=$MIRROR/$FILE
-    LFILE=$DIR/$FILE
+    local os=$1
+    local suffix=$2
+    local file=sops-${VER}.${suffix}
+    local url=$MIRROR/$file
+    local lfile=$DIR/$file
 
-    if [ ! -e $LFILE ];
+    if [ ! -e $lfile ];
     then
-        wget -q -O $LFILE $URL
+        wget -q -O $lfile $url
     fi
 
-    printf "    # %s\n" $URL
-    printf "    %s: sha256:%s\n" $OS `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $os `sha256sum $lfile | awk '{print $1}'`
 }
 
 printf "  '%s':\n" $VER
