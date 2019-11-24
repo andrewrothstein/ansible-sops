@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
-VER=${1:-3.4.0}
 DIR=~/Downloads
-MIRROR=https://github.com/mozilla/sops/releases/download/${VER}
+MIRROR=https://github.com/mozilla/sops/releases/download
 
 dl()
 {
-    local os=$1
-    local suffix=$2
-    local file=sops-${VER}.${suffix}
-    local url=$MIRROR/$file
+    local ver=$1
+    local os=$2
+    local suffix=$3
+    local file=sops-${ver}.${suffix}
+    local url=$MIRROR/$ver/$file
     local lfile=$DIR/$file
 
     if [ ! -e $lfile ];
@@ -20,7 +20,12 @@ dl()
     printf "    %s: sha256:%s\n" $os `sha256sum $lfile | awk '{print $1}'`
 }
 
-printf "  '%s':\n" $VER
-dl darwin darwin
-dl windows exe
-dl linux linux
+dl_ver() {
+    local ver=$1
+    printf "  %s:\n" $ver
+    dl $ver darwin darwin
+    dl $ver windows exe
+    dl $ver linux linux
+}
+
+dl_ver ${1:-v3.5.0}
