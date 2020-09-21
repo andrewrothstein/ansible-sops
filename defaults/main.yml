@@ -1,6 +1,6 @@
 ---
 # defaults file for sops
-sops_ver: v3.6.0
+sops_ver: v3.6.1
 sops_os: linux
 
 sops_install_dir: /usr/local/bin
@@ -36,3 +36,10 @@ sops_checksums:
     windows: sha256:e39c46c07dd649900852eed54b680dba36825d6756da180c23d176fb35f37c92
     # https://github.com/mozilla/sops/releases/download/v3.6.0/sops-v3.6.0.linux
     linux: sha256:280ca39d21e6740dfa5332b12ef41698acf014e5f277c5c296c61e83b4ccad21
+  v3.6.1:
+    # https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.darwin
+    darwin: sha256:b9f76aed791267576ec470a28dc56861a77264f379c075c58ea1515ab9b49c80
+    # https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.exe
+    windows: sha256:aab1693a8a8f0a188c31391406b637c19ce937134c6e7821c6f25cd2b47e6a2a
+    # https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.linux
+    linux: sha256:b2252aa00836c72534471e1099fa22fab2133329b62d7826b5ac49511fcc8997
