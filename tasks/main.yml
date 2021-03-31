@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: download
+- name: downloading {{ sops_url }} to {{ sops_installed_exe }}
   become: yes
   become_user: root
   get_url:
@@ -17,7 +17,7 @@
     dest: '{{ sops_installed_exe }}'
     checksum: '{{ sops_checksum }}'
     mode: 0755
-- name: link
+- name: linking {{ sops_link }} to {{ sops_installed_exe }}
   become: yes
   become_user: root
   file:
