@@ -1,6 +1,6 @@
 andrewrothstein.sops
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-sops.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-sops)
+![Build Status](https://github.com/andrewrothstein/ansible-sops/actions/workflows/build.yml/badge.svg)
 
 Installs Mozilla's [sops](https://github.com/mozilla/sops)
 
