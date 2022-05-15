@@ -28,4 +28,4 @@ dl_ver() {
     dl $ver linux linux
 }
 
-dl_ver ${1:-v3.7.2}
+dl_ver ${1:-v3.7.3}
