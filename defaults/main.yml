@@ -1,7 +1,6 @@
 ---
 # defaults file for sops
 sops_ver: v3.7.3
-sops_os: linux
 
 sops_install_dir: /usr/local/bin
 
