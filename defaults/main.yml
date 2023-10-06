@@ -1,72 +1,22 @@
 ---
 # defaults file for sops
-sops_ver: v3.7.3
+sops_ver: v3.8.0
+sops_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 
 sops_install_dir: /usr/local/bin
 
-sops_mirror: https://github.com/mozilla/sops/releases/download
+sops_mirror: https://github.com/getsops/sops/releases/download
 
 sops_checksums:
-  '3.3.1':
-    # https://github.com/mozilla/sops/releases/download/3.3.1/sops-3.3.1.darwin
-    darwin: sha256:09bb5920ae609bdf041b74843e2d8211a7059847b21729fadfbd3c3e33e67d26
-    # https://github.com/mozilla/sops/releases/download/3.3.1/sops-3.3.1.exe
-    windows: sha256:56ecc6965880a7fa7c9ef826bf64f85a323493a5167194a38a16302f82cb7364
-    # https://github.com/mozilla/sops/releases/download/3.3.1/sops-3.3.1.linux
-    linux: sha256:6eacdd01b68fd140eb71bbca233bea897cccb75dbf9e00a02e648b2f9a8a6939
-  '3.4.0':
-    # https://github.com/mozilla/sops/releases/download/3.4.0/sops-3.4.0.darwin
-    darwin: sha256:a9e508953c9a61051872c844c1e359496c85ecc17dc46e800a990fb54dd7a959
-    # https://github.com/mozilla/sops/releases/download/3.4.0/sops-3.4.0.exe
-    windows: sha256:bc6502472ee7546849c42b9dbf9fe962e3e083c62bbf53529db2257f3c178cd3
-    # https://github.com/mozilla/sops/releases/download/3.4.0/sops-3.4.0.linux
-    linux: sha256:369ceb213c6fd84d76d89d82f7a63e2226b00f5128c7bb84c7ebcfaffbde6139
-  v3.5.0:
-    # https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0.darwin
-    darwin: sha256:795f03364ed8499d169505021b443226b5a9ee9e8a58f560188a133870d194c9
-    # https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0.exe
-    windows: sha256:326f00573d01979d231ff07cbfdadb5f353a87998ba4144ec7c72f53d377af13
-    # https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0.linux
-    linux: sha256:610fca9687d1326ef2e1a66699a740f5dbd5ac8130190275959da737ec52f096
-  v3.6.0:
-    # https://github.com/mozilla/sops/releases/download/v3.6.0/sops-v3.6.0.darwin
-    darwin: sha256:687a5c2034fb275564ca15aec367edab144977af8bbd1a0ed723d8897e9a5c58
-    # https://github.com/mozilla/sops/releases/download/v3.6.0/sops-v3.6.0.exe
-    windows: sha256:e39c46c07dd649900852eed54b680dba36825d6756da180c23d176fb35f37c92
-    # https://github.com/mozilla/sops/releases/download/v3.6.0/sops-v3.6.0.linux
-    linux: sha256:280ca39d21e6740dfa5332b12ef41698acf014e5f277c5c296c61e83b4ccad21
-  v3.6.1:
-    # https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.darwin
-    darwin: sha256:b9f76aed791267576ec470a28dc56861a77264f379c075c58ea1515ab9b49c80
-    # https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.exe
-    windows: sha256:aab1693a8a8f0a188c31391406b637c19ce937134c6e7821c6f25cd2b47e6a2a
-    # https://github.com/mozilla/sops/releases/download/v3.6.1/sops-v3.6.1.linux
-    linux: sha256:b2252aa00836c72534471e1099fa22fab2133329b62d7826b5ac49511fcc8997
-  v3.7.0:
-    # https://github.com/mozilla/sops/releases/download/v3.7.0/sops-v3.7.0.darwin
-    darwin: sha256:4112cf83d5e93814c8ad62922b46b05838b5f9eb4920127b8271c37eb4f91245
-    # https://github.com/mozilla/sops/releases/download/v3.7.0/sops-v3.7.0.exe
-    windows: sha256:0b9846636bbd43b4057cd9587a9e5fda98114e20c7177b142957390afa996a85
-    # https://github.com/mozilla/sops/releases/download/v3.7.0/sops-v3.7.0.linux
-    linux: sha256:3efe1dc686cdf60ad6f9448f198e16a007c72a8d820d8d0a81de27f02a9f7c16
-  v3.7.1:
-    # https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.darwin
-    darwin: sha256:43d2f9c63921a57bf607268a05d480cc309e9979bb81269248dd117e5efac133
-    # https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.exe
-    windows: sha256:a514bd0ade6d955a73f9c8b9dde6c33eca006430b0e72289467d2152c5321767
-    # https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux
-    linux: sha256:185348fd77fc160d5bdf3cd20ecbc796163504fd3df196d7cb29000773657b74
-  v3.7.2:
-    # https://github.com/mozilla/sops/releases/download/v3.7.2/sops-v3.7.2.darwin
-    darwin: sha256:1c48f8f87cc684dd79df9e894a85a7347eb0bdfbd5a3b2b1866af7733dbdb2a1
-    # https://github.com/mozilla/sops/releases/download/v3.7.2/sops-v3.7.2.exe
-    windows: sha256:c644ec3d3c069d29c7211dc8333280b93cf97059818b90c4317e94c37ba70e41
-    # https://github.com/mozilla/sops/releases/download/v3.7.2/sops-v3.7.2.linux
-    linux: sha256:0f54a5fc68f82d3dcb0d3310253f2259fef1902d48cfa0a8721b82803c575024
-  v3.7.3:
-    # https://github.com/mozilla/sops/releases/download/v3.7.3/sops-v3.7.3.darwin
-    darwin: sha256:d62c9a4404197b5e56b59a4974caeb44086dd8cc9a5dba903e949d3a0a8e1350
-    # https://github.com/mozilla/sops/releases/download/v3.7.3/sops-v3.7.3.exe
-    windows: sha256:0ccda78bc7f7dbf3f07167221f2a42cab2b10d02de7c26fe8e707efaacaf3bd2
-    # https://github.com/mozilla/sops/releases/download/v3.7.3/sops-v3.7.3.linux
-    linux: sha256:53aec65e45f62a769ff24b7e5384f0c82d62668dd96ed56685f649da114b4dbb
+  v3.8.0:
+    # https://github.com/getsops/sops/releases/download/v3.8.0/sops-v3.8.0.darwin.arm64
+    darwin.arm64: sha256:44d98ffd8622629adab069f5ad30ccada702c6cff11102f8be932f98cd04ae42
+    # https://github.com/getsops/sops/releases/download/v3.8.0/sops-v3.8.0.darwin.amd64
+    darwin.amd64: sha256:f1b2fb34014a3965c5aad9029986fa3499419675c8344b3dab151f9efb8a3b88
+    # https://github.com/getsops/sops/releases/download/v3.8.0/sops-v3.8.0.linux.amd64
+    linux.amd64: sha256:48fb4a6562014a9213be15b4991931266d040b9b64dba8dbcd07b902e90025c0
+    # https://github.com/getsops/sops/releases/download/v3.8.0/sops-v3.8.0.linux.arm64
+    linux.arm64: sha256:5ec31eaed635e154b59ff4b7c9b311b6e616bd4818a68899c2f9db00c81e3a63

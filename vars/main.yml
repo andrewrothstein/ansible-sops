@@ -1,8 +1,10 @@
 ---
 # vars file for sops
 sops_os: '{{ ansible_system | lower }}'
-sops_exe: sops-{{ sops_ver }}.{{ sops_exe_suffix | default(sops_os) }}
+sops_arch: '{{ sops_arch_map[ansible_architecture] }}'
+sops_platform: '{{ sops_os }}.{{ sops_arch }}'
+sops_exe: sops-{{ sops_ver }}.{{ sops_platform }}
 sops_url: '{{ sops_mirror }}/{{ sops_ver }}/{{ sops_exe }}'
-sops_checksum: '{{ sops_checksums[sops_ver][sops_os] }}'
+sops_checksum: '{{ sops_checksums[sops_ver][sops_platform] }}'
 sops_installed_exe: '{{ sops_install_dir }}/{{ sops_exe }}'
 sops_link: '{{ sops_install_dir }}/sops'
