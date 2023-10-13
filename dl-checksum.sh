@@ -30,4 +30,4 @@ dl_ver() {
     dl $ver linux arm64
 }
 
-dl_ver ${1:-v3.8.0}
+dl_ver ${1:-v3.8.1}
