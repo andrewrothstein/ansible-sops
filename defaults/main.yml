@@ -1,6 +1,6 @@
 ---
 # defaults file for sops
-sops_ver: v3.9.0
+sops_ver: v3.9.1
 sops_arch_map:
   aarch64: arm64
   arm64: arm64
@@ -38,3 +38,12 @@ sops_checksums:
     linux.amd64: sha256:0d65660fbe785647ff4f1764d7f69edf598f79d6d79ebbef4a501909b6ff6b82
     # https://github.com/getsops/sops/releases/download/v3.9.0/sops-v3.9.0.linux.arm64
     linux.arm64: sha256:596f26de6d4f7d1cc44f9e27bfea3192ef77f810f31f3f4132a417860ab91ebc
+  v3.9.1:
+    # https://github.com/getsops/sops/releases/download/v3.9.1/sops-v3.9.1.darwin.arm64
+    darwin.arm64: sha256:0ab2cc54f0d8b8414dab83c18017ae3c005d405480b343c788a84fa4af5b19e3
+    # https://github.com/getsops/sops/releases/download/v3.9.1/sops-v3.9.1.darwin.amd64
+    darwin.amd64: sha256:740b3a356c965830272d8f7aec2ea2e500d4a39f03e4aad347c004f3a0bdc2de
+    # https://github.com/getsops/sops/releases/download/v3.9.1/sops-v3.9.1.linux.amd64
+    linux.amd64: sha256:cd795109851c3a483bbaa66d15d19ddb2227ac0352b39e25d96b67d51edb6225
+    # https://github.com/getsops/sops/releases/download/v3.9.1/sops-v3.9.1.linux.arm64
+    linux.arm64: sha256:bc946fef11dbe199587adac567037b69374c4202f928ca138443539efc85b357
